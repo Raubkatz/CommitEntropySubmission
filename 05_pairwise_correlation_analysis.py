@@ -73,8 +73,6 @@ except Exception as exc:  # pragma: no cover
 #   data_isBugPresent_classification/cleaned_dataset.csv
 #   data_isBugfix_classification/cleaned_dataset.csv
 #   data_isSZZBugIntroducer_classification/cleaned_dataset.csv
-#   OBJ_data_isBugPresent_risk_score/cleaned_dataset.csv
-#   OBJ_data_isSZZBugIntroducer_risk_score/cleaned_dataset.csv
 TARGET = "isSZZBugIntroducer"
 
 # Choose the cleaned-data workflow folder suffix.
@@ -82,14 +80,7 @@ TARGET = "isSZZBugIntroducer"
 # Use "risk_score" for the risk-score/regressor-cleaned dataset.
 CLEANED_DATA_KIND = "classification"
 
-# Set True for the OBJ risk-score pipeline folders, e.g. OBJ_data_{TARGET}_risk_score.
-# Set False for the regular folders, e.g. data_{TARGET}_classification.
-USE_OBJ_PREFIX = False
-
-if USE_OBJ_PREFIX:
-    INPUT_CSV = Path(f"OBJ_data_{TARGET}_{CLEANED_DATA_KIND}") / "cleaned_dataset.csv"
-else:
-    INPUT_CSV = Path(f"data_{TARGET}_{CLEANED_DATA_KIND}") / "cleaned_dataset.csv"
+INPUT_CSV = Path(f"data_{TARGET}_{CLEANED_DATA_KIND}") / "cleaned_dataset.csv"
 
 # Select ANY two columns from the cleaned CSV.
 # Class/label columns are allowed, e.g. "isBugPresent", "isBugfix", "isSZZBugIntroducer".

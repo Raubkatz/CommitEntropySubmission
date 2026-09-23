@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-00_merge_projects_to_csv_2026.py
+00a_data_analysis_merge_projects.py
 
-Merge all per-project CSVs from ./nu_files_2026 into one merged dataset in ./merged_csv.
+Merge all per-project CSVs from ./data_raw into one merged dataset in ./data_merged.
 """
 
 from __future__ import annotations
@@ -19,8 +19,8 @@ import pandas as pd
 # PARAMETERS (SET HERE)
 # ==============================
 
-INPUT_DIR = "DATA_ESEIW_final" #important, set correct project directory
-OUT_DIR = "DATA_ESEIW_merged_csv"
+INPUT_DIR = "data_raw" #important, set correct project directory
+OUT_DIR = "data_merged"
 OUTPUT_NAME = "merged_dataset_2026.csv"
 PATTERN = "*.csv"
 
@@ -28,7 +28,7 @@ SCHEMA_CHECK = True
 KEEP_EXTRA_COLS = False
 WRITE_PARQUET = False
 
-EXPECTED_COLUMNS: List[str] = [ #Input von Philip
+EXPECTED_COLUMNS: List[str] = [
     "isSZZBugIntroducer",
     "age",  # ok
     "revision",  # ok

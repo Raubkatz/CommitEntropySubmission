@@ -47,7 +47,7 @@ import pandas as pd
 # =========================
 
 # Input merged dataset (from your merge script)
-INPUT_CSV = Path("DATA_ESEIW_merged_csv") / "merged_dataset_2026.csv"
+INPUT_CSV = Path("data_merged") / "merged_dataset_2026.csv"
 
 # Target / class column (what you want to predict)
 TARGET = "isSZZBugIntroducer" #class, c_j
