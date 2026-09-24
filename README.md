@@ -105,7 +105,7 @@ It also checks that all project files follow the same expected column structure.
 ## Input
 
 ```text
-DATA_ESEIW_final/
+data_raw/
 ```
 
 This folder should contain the project-level CSV files.
@@ -113,15 +113,15 @@ This folder should contain the project-level CSV files.
 ## Output
 
 ```text
-DATA_ESEIW_merged_csv/merged_dataset_2026.csv
-DATA_ESEIW_merged_csv/merge_report.json
+data_raw_merged_csv/merged_dataset_2026.csv
+data_raw_merged_csv/merge_report.json
 ```
 
 ## Main settings inside the script
 
 ```python
-INPUT_DIR = "DATA_ESEIW_final"
-OUT_DIR = "DATA_ESEIW_merged_csv"
+INPUT_DIR = "data_raw_final"
+OUT_DIR = "data_raw_merged_csv"
 OUTPUT_NAME = "merged_dataset_2026.csv"
 PATTERN = "*.csv"
 ```
@@ -153,7 +153,7 @@ It:
 ## Input
 
 ```text
-DATA_ESEIW_merged_csv/merged_dataset_2026.csv
+data_raw_merged_csv/merged_dataset_2026.csv
 ```
 
 ## Output
@@ -425,7 +425,7 @@ Class meaning:
 After running the full pipeline, the main folders are:
 
 ```text
-DATA_ESEIW_merged_csv/
+data_raw_merged_csv/
 data_isSZZBugIntroducer_classification/
 correlation_analysis_results_isSZZBugIntroducer_classification/
 ```
