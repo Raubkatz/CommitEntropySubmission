@@ -88,6 +88,8 @@ python 05_pairwise_correlation_analysis.py
 
 # 1. Merge Project CSV Files
 
+First unpack all zip-files in data_raw folder.
+
 ## Script
 
 ```bash
